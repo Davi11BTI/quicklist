@@ -107,7 +107,7 @@ main{
     }
 }
 
-.list{Add commentMore actions
+.list{
         .item{
             background: var(--background-secondary);
             padding: 1.2rem;
@@ -167,7 +167,7 @@ main{
                 }
             }
         }
-        }Add commentMore actions
+}
 
 .warning{
     background: var(--color-danger);
@@ -178,7 +178,28 @@ main{
     border-radius: 1.2rem;
     margin-top: 2.4rem;
 
-    opacity: 0;
+    opacity: 1;
     transform: translateY(0);
     transition: opacity .4s ease, transform .4s ease;
+
+    div{
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+    }
+
+    i{
+        font-size: 2rem;
+    }
+
+    button{
+        border: none;
+        background: none;
+        color: var(--always-white);
+        cursor: pointer;
+    }
 }
+
+.hide-warning{
+    opacity: 0;
+    transform: translateY(-10px);
