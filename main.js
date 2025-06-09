@@ -1,11 +1,11 @@
 const items = []
 
-function addItem(){
+function addItem() {
     const itemName = document.querySelector("#item").value
 
     const item = {
-        name : itemName,
-        checked : false
+        name: itemName,
+        checked: false
     }
 
     items.push(item)
@@ -15,7 +15,7 @@ function addItem(){
     showItemsList()
 }
 
-function showItemsList(){
+function showItemsList() {
     const sectionList = document.querySelector(".list")
     sectionList.textContent = ""
 
@@ -30,8 +30,20 @@ function showItemsList(){
                     <label for="item-${index}">${item.name}</label>
                 </div>
 
-                <button><img src="./assets/trash-icon.svg" alt="Icone de lixo"></button>
+                <button onclick="removeItem('${item.name}')">
+                    <img src="./assets/trash-icon.svg" alt="trash icon">
+                </button>
             </div>
         `
     })
+}
+
+function removeItem(itemName) {
+    const itemIndex = items.findIndex((item) => item.name === itemName)
+
+    if (itemIndex !== -1) {
+        items.splice(itemIndex, 1)
+    }
+    
+    showItemsList()
 }
