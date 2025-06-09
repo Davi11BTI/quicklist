@@ -1,4 +1,4 @@
-*{More actions
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -39,7 +39,6 @@ header{
     width: 15.4rem;
     margin-inline: auto;
     margin-bottom: 3rem;
-    
     }
 
     button{
@@ -58,4 +57,10 @@ header{
         color: var(--content-primary);
         line-height: 3.2rem;
     }
+}
+
+main{
+    max-width: 62.7rem;
+    margin-inline: auto;
+    
 }
